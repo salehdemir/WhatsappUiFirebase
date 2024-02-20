@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment">
+
+
+    <ImageView
+        android:id="@+id/imWhatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="300dp" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in"
+        android:textSize="32sp"
+        android:layout_marginTop="16dp"
+      app:layout_constraintTop_toBottomOf="@id/imWhatsapp"
+        app:layout_constraintEnd_toEndOf="@id/imWhatsapp"
+        app:layout_constraintStart_toStartOf="@id/imWhatsapp"
+        />
+
+    <EditText
+        android:id="@+id/emailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        android:maxLines="1"
+        android:textColor="@color/whatsappColor"
+        app:layout_constraintEnd_toEndOf="@+id/tvLogin"
+        app:layout_constraintStart_toStartOf="@+id/tvLogin"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin" />
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password"
+        android:minHeight="48dp"
+        android:inputType="textPassword"
+        android:textColor="@color/whatsappColor"
+        app:layout_constraintEnd_toEndOf="@id/emailLogin"
+        app:layout_constraintStart_toStartOf="@id/emailLogin"
+        app:layout_constraintTop_toBottomOf="@id/emailLogin" />
+
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/passwordLogin"
+        app:layout_constraintStart_toStartOf="@id/passwordLogin"
+        app:layout_constraintTop_toBottomOf="@id/passwordLogin"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+           android:textColor="@color/whatsappColor"
+            android:textSize="16sp"
+
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/whatsappColor"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/linearLog"
+        app:layout_constraintStart_toStartOf="@id/linearLog"
+        app:layout_constraintTop_toBottomOf="@id/linearLog"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
